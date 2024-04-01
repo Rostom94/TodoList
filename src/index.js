@@ -1,3 +1,5 @@
+import "./style.css";
+
 import RenderProject from "./renderProject";
 import createTodo from "./createTodo";
 import formInput from "./btnCreateProject";

@@ -3,7 +3,8 @@ import createProject from "./createProject";
 export default function RenderProject(name, duration, priority) {
   const newProject = new createProject(name, duration, priority);
 
-  const root = document.querySelector(".root");
+  const form_result = document.createElement("div");
+  form_result.classList.add("form-result");
 
   const project_container = document.createElement("div");
   project_container.classList.add("project-container");
@@ -20,7 +21,9 @@ export default function RenderProject(name, duration, priority) {
   project_priority.classList.add("project-priority");
   project_priority.textContent = newProject.projectPriority;
 
-  root.appendChild(project_name);
-  root.appendChild(project_duration);
-  root.appendChild(project_priority);
+  form_result.appendChild(project_name);
+  form_result.appendChild(project_duration);
+  form_result.appendChild(project_priority);
+
+  document.querySelector(".root").appendChild(form_result);
 }

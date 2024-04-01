@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+/* reset */
+:root,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header and nav section */
+header {
+  width: 100%;
+  height: 50px;
+  padding: 0px 50px;
+  background-color: #2b3a42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: "Dancing Script";
+  color: white;
+  font-size: 25px;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1rem;
+  &:hover {
+    cursor: pointer;
+    color: #8dd6f9;
+    position: relative;
+    border-bottom: 5px solid #8dd6f9;
+  }
+}
+
+/* form styling */
+
+.name-input,
+.duration-input,
+.priority-input {
+  height: 50px;
+}
+
+.form-content {
+  /*   border: 5px solid red; */
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  & button {
+    height: 50px;
+    width: 150px;
+    background-color: #8dd6f9;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+
+/* form result section */
+
+.form-result {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: 5px solid red;
+  width: 500px;
+  height: 200px;
+  grid-template-columns: 75px 370px;
+  grid-template-rows: repeat(2, 90px);
+  margin-top: 15px;
+}
+
+.project-name {
+  grid-area: 1/2/2/3;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.5rem;
+}
+
+.project-priority {
+  grid-area: 1/1/2/2;
+  align-self: center;
+  justify-self: center;
+  color: white;
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 50%;
+  font-size: 2.2rem;
+}
+
+.project-duration {
+  grid-area: 2 / 1 / 3 / 3;
+}
